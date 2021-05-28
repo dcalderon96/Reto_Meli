@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "01bc81c3-7b3d-443e-a091-799d8458e679",
+		"name": "Reto_Meli",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TopSecret",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Satellites\": [\r\n        {\r\n            \"name\":\"kenobi\",\r\n            \"distance\":100.0,\r\n            \"message\":[\"este\",\"\",\" \",\"mensaje\", \" \"]\r\n        },\r\n        {\r\n            \"name\":\"skywalker\",\r\n            \"distance\":115.5,\r\n            \"message\":[\" \",\"es\",\" \",\" \",\"secreto\"]\r\n        },\r\n        {\r\n            \"name\":\"sato\",\r\n            \"distance\":142.7,\r\n            \"message\":[\"\",\" \",\"un\",\" \",\" \"]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://solar-attic-315010.uc.r.appspot.com/topsecret",
+					"protocol": "https",
+					"host": [
+						"solar-attic-315010",
+						"uc",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"topsecret"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TopSecret_Split",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"distance\":100.0,\r\n    \"message\":[\"\", \"\", \"un\", \"\", \"secreto\"]\r\n}"
+				},
+				"url": {
+					"raw": "https://solar-attic-315010.uc.r.appspot.com/topsecret_split?satellite=sato",
+					"protocol": "https",
+					"host": [
+						"solar-attic-315010",
+						"uc",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"topsecret_split"
+					],
+					"query": [
+						{
+							"key": "satellite",
+							"value": "sato"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TopSecret_Split",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://solar-attic-315010.uc.r.appspot.com/topsecret_split",
+					"protocol": "https",
+					"host": [
+						"solar-attic-315010",
+						"uc",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"topsecret_split"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
